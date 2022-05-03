@@ -130,12 +130,22 @@
         width: 100%;
         padding: 5px 0;
     }
+    /** Animación: multicolor **/
+    @keyframes multicolor {
+        0% {background-color: rgb(226, 234, 233);}
+        25% {background-color: antiquewhite}
+        50% {background-color: darkgrey}
+        75% {background-color: antiquewhite}
+        100% {background-color: rgb(226, 234, 233);}
+    }
     .header-list {
         list-style: none;
         font-size: 15px;
         font-family: "Roboto", sans-serif;
         background-color: rgb(226, 234, 233);
         animation-name: multicolor;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
         border-bottom: solid 1px black;
         padding-bottom: 10px;
         margin-top: 0px;
@@ -156,16 +166,29 @@
         display: inline;
         list-style: none;
     }
+    /** Animación: spin **/
+    @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg)
+        }
+    }
     .logo{
         width: 50px;
         height: auto;
         border-radius: 50%;
         position: relative;
+        animation-name: spin;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
         margin-top: 10px;
         margin-right: 25px;
-    }    
+    }
     .end{
-        background-color: rgb(226, 234, 233);
+        background-image: linear-gradient(90deg, rgb(226,234,233), rgb(97,200,190), rgb(3,255,253));
     }
     .button{
         border-top: solid 2px black;
